@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="azulEncendido">#0000FF</color>
-
+    <color name="verdeEncendido">#00FF00</color>
+    <color name="rojoEncendido">#FF0000</color>
+    <color name="amarilloEncendido">#FFFF00</color>
+    <color name="azulApagado">#CCCCFF</color>
+    <color name="verdeApagado">#CCFFCC</color>
+    <color name="rojoApagado">#FFCCCC</color>
+    <color name="amarilloApagado">#FFFFCC</color>
 
 </resources>
