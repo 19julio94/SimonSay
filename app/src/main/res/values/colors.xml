@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
     <color name="azulEncendido">#0000FF</color>
     <color name="verdeEncendido">#00FF00</color>
     <color name="rojoEncendido">#FF0000</color>

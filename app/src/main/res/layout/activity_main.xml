@@ -11,75 +11,81 @@
     tools:context="com.example.jules.simonsay.MainActivity">
 
 
-
     <GridLayout
-        android:layout_width="356dp"
-        android:layout_height="368dp"
-        android:rowCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:columnCount="2"
+        android:rowCount="2"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <Button
-
-            android:layout_width="178dp"
-            android:layout_height="184dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/b_azul"
+            android:id="@+id/bazul"
             android:layout_row="0"
             android:layout_column="0"
-
-            android:backgroundTint="@color/azulApagado" />
+            android:background="@color/azulApagado"
+            android:layout_width="174dp"
+            android:onClick="Click"
+            android:layout_height="182dp" />
 
         <Button
-
-            android:layout_width="178dp"
-            android:layout_height="184dp"
-            android:id="@+id/b_amarillo"
-            android:layout_above="@+id/gridLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:id="@+id/bverde"
             android:layout_row="1"
             android:layout_column="1"
-            android:backgroundTint="@color/amarilloApagado" />
+            android:background="@color/verdeApagado"
+            android:layout_height="182dp"
+            android:layout_width="174dp"
+            android:onClick="Click"
+
+
+            />
 
         <Button
-
-            android:layout_width="178dp"
-            android:layout_height="184dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/b_verde"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:backgroundTint="@color/verdeApagado" />
-
-        <Button
-
-            android:layout_width="178dp"
-            android:layout_height="184dp"
-            android:id="@+id/b_rojo"
-            android:layout_above="@+id/gridLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="133dp"
+            android:id="@+id/bamarillo"
             android:layout_row="1"
             android:layout_column="0"
-            android:backgroundTint="@color/rojoApagado" />
+            android:background="@color/amarilloApagado"
+            android:onClick="Click"
+            android:layout_height="182dp"
+            android:layout_width="174dp" />
+
+        <Button
+            android:layout_row="0"
+            android:layout_column="1"
+            android:id="@+id/brojo"
+            android:background="@color/rojoApagado"
+            android:onClick="Click"
+            android:layout_height="182dp"
+            android:layout_width="174dp" />
+
 
     </GridLayout>
 
-    <Button
-        android:text="START"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/start"
+
+
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
-        android:onClick="Clickar"
-        />
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            android:text="PLAY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bplay"
+            android:layout_weight="1"
+            android:onClick="iniciar"
+            />
+    </LinearLayout>
 
 
 </RelativeLayout>
