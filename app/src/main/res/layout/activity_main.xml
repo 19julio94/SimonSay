@@ -10,4 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jules.simonsay.MainActivity">
 
+    <Button
+        android:text="START"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/b_amarillo"
+        android:background="@color/amarilloApagado"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/b_rojo"
+        android:layout_toStartOf="@+id/b_rojo" />
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/b_rojo"
+        android:background="@color/rojoApagado"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/b_verde"
+        android:background="@color/verdeApagado"
+        android:layout_above="@+id/b_amarillo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="350px"
+        android:layout_height="350px"
+        android:id="@+id/b_azul"
+        android:background="@color/azulApagado"
+        android:layout_above="@+id/b_amarillo"
+        android:layout_alignLeft="@+id/b_amarillo"
+        android:layout_alignStart="@+id/b_amarillo" />
 </RelativeLayout>
