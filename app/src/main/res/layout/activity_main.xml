@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,48 +10,76 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jules.simonsay.MainActivity">
 
+
+
+    <GridLayout
+        android:layout_width="356dp"
+        android:layout_height="368dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+
+            android:layout_width="178dp"
+            android:layout_height="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/b_azul"
+            android:layout_row="0"
+            android:layout_column="0"
+
+            android:backgroundTint="@color/azulApagado" />
+
+        <Button
+
+            android:layout_width="178dp"
+            android:layout_height="184dp"
+            android:id="@+id/b_amarillo"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:backgroundTint="@color/amarilloApagado" />
+
+        <Button
+
+            android:layout_width="178dp"
+            android:layout_height="184dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/b_verde"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:backgroundTint="@color/verdeApagado" />
+
+        <Button
+
+            android:layout_width="178dp"
+            android:layout_height="184dp"
+            android:id="@+id/b_rojo"
+            android:layout_above="@+id/gridLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="133dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:backgroundTint="@color/rojoApagado" />
+
+    </GridLayout>
+
     <Button
         android:text="START"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/start"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="empezar"
-        android:id="@+id/start" />
+        android:layout_marginBottom="15dp"
+        android:onClick="Clickar"
+        />
 
-    <Button
-        android:layout_width="350px"
-        android:layout_height="350px"
-        android:id="@+id/b_amarillo"
-        android:background="@color/amarilloApagado"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/b_rojo"
-        android:layout_toStartOf="@+id/b_rojo" />
 
-    <Button
-        android:layout_width="350px"
-        android:layout_height="350px"
-        android:id="@+id/b_rojo"
-        android:background="@color/rojoApagado"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="350px"
-        android:layout_height="350px"
-        android:id="@+id/b_verde"
-        android:background="@color/verdeApagado"
-        android:layout_above="@+id/b_amarillo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="350px"
-        android:layout_height="350px"
-        android:id="@+id/b_azul"
-        android:background="@color/azulApagado"
-        android:layout_above="@+id/b_amarillo"
-        android:layout_alignLeft="@+id/b_amarillo"
-        android:layout_alignStart="@+id/b_amarillo" />
 </RelativeLayout>
