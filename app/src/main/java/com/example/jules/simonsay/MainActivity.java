@@ -1,5 +1,6 @@
 package com.example.jules.simonsay;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -198,7 +199,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void check(){
-
+            Intent intento=new Intent(MainActivity.this,MensajeActivity.class);
+        String mensaje="";
         int acertados=0;
 
         for(int i=0;i<numeros.length;i++){
@@ -207,6 +209,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Toast.makeText(this, "Has perdido", Toast.LENGTH_SHORT).show();
+                mensaje ="oh has perdido";
+                intento.putExtra("VICTORIA_DERROTA",mensaje);
+                startActivity(intento);
             }else{
 
                 acertados++;
@@ -217,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
             if(acertados==4){
 
                 Toast.makeText(this, "Has ganado", Toast.LENGTH_SHORT).show();
+                mensaje="has ganadoooo";
+                intento.putExtra("VICTORIA_DERROTA",mensaje);
             }
             enabledPlay=false;
             botonesPulsados=0;
