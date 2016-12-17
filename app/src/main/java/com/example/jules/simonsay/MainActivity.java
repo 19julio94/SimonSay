@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
+//Declaro los botonoes los objetos de tipo Handler que son para los retardos,ademas del array botones que contiene los botones para pulsar con sus colores,los tiempos de encendido del boton
+    //ademas del array MediaPlayer que contiene los sonidos.
     Button iniciar;
     Handler retardo1=new Handler();
     Handler retardo2=new Handler();
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//indico el tamaño del array de botones,de sonidos y cada sonido y boton con sus correspondientes sonidos y colores
         ordenJugador=new int[4];
         numeros=new int[4];
         botones=new Button[4];
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Este metodo hace que al pulsar un boton se ilumine con su color y sonido,la variable indice se usa para despues poder ser comprobado en el metodo Check
     public void Click(View v) {
         int indice;
         int id = v.getId();
@@ -78,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             sonido[3].start();
             indice=3;
 
-        }
+        }//El handler hace que una vez se enciendan los botones,pase ciertos milisegundo y se resete al color original
         Handler handler=new Handler();
 
         handler.postDelayed(new Runnable() {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+//El metodo iniciar ,inicia la secuencia de colores,el for genera cuatro numeros aleatorio comprendidos entre 0 y 4 y los guarda en el array de numeros,y con el delay hacemos que se encienda durante X milisegundos
     public void iniciar(View v) {
         enabledPlay=true;
         for (int i = 0; i < numeros.length; i++) {
@@ -168,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+//Resetear,mediante if comprobamos la id del boton y le indicamos que si esa id es la correcta pasan a tener el color original
     public void resetear(int id) {
 
 
@@ -196,6 +198,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+//Check comprueba que si la secuencia de botones iniciada por el for es la misma que la pulsada por el jugador,nos manda un toast con un mensdaje de "ganando" y otro toast con un mensaje de "perdido"
 
 
     public void check(){
